@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Calculator</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
+    />
+
+    <style>
+      .alert {
+        background: white;
+        padding: 1rem;
+        border-radius: 5px;
+        color: black;
+        margin: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+    
+    </div>
+
+    <!-- Form -->
+    <div class="container">
+      <form action="/calc" method="POST">
+        <label for="Number One">Op1</label>
+        <input
+          type="text"
+          placeholder="First Number"
+          class="u-full-width"
+          name="num1"
+        />
+
+        <label for="Number Two">Op2</label>
+        <input
+          type="text"
+          placeholder="Second Number"
+          class="u-full-width"
+          name="num2"
+        />
+
+        <label for="Operation">Op</label>
+        <select class="u-full-width" name="operation">
+          <option value="add">+</option>
+          <option value="subtract">-</option>
+          <option value="multiply">*</option>
+          <option value="divide">/</option>
+        </select>
+
+        <input type="submit" value="Calculate" id="calc_btn" />
+        <br />
+        <div class="alert">
+          {{ sum }} 
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
+
